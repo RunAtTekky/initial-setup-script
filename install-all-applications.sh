@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install all applications
-TARGET_DIR="$(pwd)/applications"
+TARGET_DIR="./applications"
 
 echo "$TARGET_DIR"
 echo "Going through each application"

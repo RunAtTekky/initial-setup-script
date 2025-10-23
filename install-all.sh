@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# Install all packages in order
-./install-zsh.sh
-./install-kitty.sh
-./install-stow.sh
-./install-hugo.sh
-./install-dotfiles.sh
-# ./install-hyprland-overrides.sh
+TARGET_DIR="./terminal"
 
-./set-shell.sh
+echo "$TARGET_DIR"
+echo "Going through each program"
+for file in "$TARGET_DIR"/*; do
+  if [ -f "$file" ] && [ -x "$file" ]; then
+    echo "Executing: $file"
+    # Run the file
+    "$file"
+    echo "-----------------------------------"
+  fi
+done
 
+./install-all-applications.sh
 ./make-directory-structure.sh
+./install-dotfiles.sh
