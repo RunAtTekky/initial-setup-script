@@ -5,7 +5,7 @@
 ./install-kitty.sh
 ./install-stow.sh
 ./install-hugo.sh
-# ./install-dotfiles.sh
+./install-dotfiles.sh
 # ./install-hyprland-overrides.sh
 
 ./set-shell.sh

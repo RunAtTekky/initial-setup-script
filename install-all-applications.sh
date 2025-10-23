@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# Install all applications in order
-./install-yazi.sh
-./install-mpv.sh
-./install-swayimg.sh
-./install-zathura.sh
-./install-newsboat.sh
-./install-kew.sh
-./install-transmission.sh
+# Install all applications
+TARGET_DIR="$(pwd)/applications"
 
-# Browsers
-./install-zen-browser.sh
-./install-brave-browser.sh
+echo "$TARGET_DIR"
+echo "Going through each application"
+for file in "$TARGET_DIR"/*; do
+  if [ -f "$file" ] && [ -x "$file" ]; then
+    echo "Executing: $file"
+    # Run the file
+    "$file"
+    echo "-----------------------------------"
+  fi
+done
