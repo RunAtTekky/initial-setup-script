@@ -4,21 +4,16 @@ set -e
 
 cat "./figlets/Repos"
 
-CODING_REPO="$HOME/MySpace/coding"
-PERSONAL_REPO="$HOME/MySpace/personal"
+export CODING_REPO="$HOME/MySpace/coding"
+export PERSONAL_REPO="$HOME/MySpace/personal"
 
 # Creating directory structure
-echo
-echo
-echo
 echo "Creating directory structure"
 mkdir -p "$CODING_REPO"
 mkdir -p "$PERSONAL_REPO"
 echo "Directory structure created"
+echo "--------------------------------"
 echo
-
-export CODING_REPO
-export PERSONAL_REPO
 
 # Clone the following repos
 echo "Cloning your favourite repos"
