@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cat "./figlets/Terminal"
 TARGET_DIR="./terminal"
 
 echo "$TARGET_DIR"

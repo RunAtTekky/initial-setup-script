@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cat "./figlets/Applications"
 # Install all applications
 TARGET_DIR="./applications"
 

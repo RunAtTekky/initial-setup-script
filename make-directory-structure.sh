@@ -2,6 +2,8 @@
 
 set -e
 
+cat "./figlets/Repos"
+
 CODING_REPO="$HOME/MySpace/coding"
 PERSONAL_REPO="$HOME/MySpace/personal"
 
@@ -20,17 +22,15 @@ export PERSONAL_REPO
 
 # Clone the following repos
 echo "Cloning your favourite repos"
-echo
-./clone-repos/clone-dsa-and-cp.sh
-echo
-./clone-repos/clone-my-docs.sh
-echo
-./clone-repos/clone-notes.sh
-echo
-./clone-repos/setup-blogging-website.sh
-echo
+echo "--------------------------------"
+TARGET="./clone-repos"
+for file in "$TARGET"/*; do
+  echo "Running: $file"
+  "$file"
+  echo "--------------------------------"
+done
 
 # Display success message
 echo "Cloning successful"
-echo
+echo "--------------------------------"
 
