@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# Install stow
-yay -S --noconfirm --needed stow
+install_program "stow" "stow"

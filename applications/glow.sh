@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# yay -S --noconfirm --needed glow
-install_program "glow"
+install_program "glow" "glow"

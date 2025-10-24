@@ -1,10 +1,11 @@
 #!/bin/bash
 
-cat "./figlets/Terminal"
-TARGET_DIR="./terminal"
+source "./helper.sh"
 
-echo "$TARGET_DIR"
-echo "Going through each program"
+cat "./figlets/Terminal"
+
+TARGET_DIR="./terminal"
+echo "Going through each program in $TARGET_DIR"
 for file in "$TARGET_DIR"/*; do
   if [ -f "$file" ] && [ -x "$file" ]; then
     echo "Executing: $file"

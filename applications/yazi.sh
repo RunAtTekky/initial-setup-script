@@ -1,5 +1,4 @@
 #!/bin/bash
 
-# yay -S --noconfirm --needed yazi
-install_program "yazi"
+install_program "yazi" "yazi"
 

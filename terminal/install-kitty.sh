@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# Install kitty
-yay -S --noconfirm --needed kitty
+install_program "kitty" "kitty"

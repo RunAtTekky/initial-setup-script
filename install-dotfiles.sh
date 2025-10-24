@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "./helper.sh"
+
 ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/runattekky/dotfiles"
 REPO_NAME="dotfiles"

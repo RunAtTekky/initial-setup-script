@@ -1,31 +1,32 @@
 #!/bin/bash
 
+source "./helper.sh"
+
 set -e
 
 cat "./figlets/Repos"
-
-export CODING_REPO="$HOME/MySpace/coding"
-export PERSONAL_REPO="$HOME/MySpace/personal"
 
 # Creating directory structure
 echo "Creating directory structure"
 mkdir -p "$CODING_REPO"
 mkdir -p "$PERSONAL_REPO"
 echo "Directory structure created"
-echo "--------------------------------"
-echo
+echo "$DASH_LINE"
 
 # Clone the following repos
-echo "Cloning your favourite repos"
-echo "--------------------------------"
+
 TARGET="./clone-repos"
+echo "Cloning your favourite repos in $TARGET"
+echo "$DASH_LINE"
 for file in "$TARGET"/*; do
-  echo "Running: $file"
-  "$file"
-  echo "--------------------------------"
+  if [ -f "$file" ] && [ -x "$file" ]; then
+    echo "Running: $file"
+    "$file"
+    echo "$DASH_LINE"
+  fi
 done
 
 # Display success message
 echo "Cloning successful"
-echo "--------------------------------"
+echo "$DASH_LINE"
 

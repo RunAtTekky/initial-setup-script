@@ -1,4 +1,3 @@
 #!/bin/bash
 
-# yay -S --noconfirm --needed newsboat
-install_program "newsboat"
+install_program "newsboat" "newsboat"
