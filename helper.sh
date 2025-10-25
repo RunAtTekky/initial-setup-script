@@ -15,6 +15,7 @@ install_pkgs() {
   local packages=("$@")
   local to_install=()
 
+  echo "Trying to install ${packages[*]}"
   for pkg in "${packages[@]}"; do
     if ! is_installed "$pkg" && ! is_group_installed "$pkg"; then
       to_install+=("$pkg")
