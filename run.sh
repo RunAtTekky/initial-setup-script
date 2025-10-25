@@ -20,6 +20,9 @@ fi
 
 echo "$DASH_LINE"
 
+echo "Updating system"
+yay -Syu --noconfirm
+
 echo "Installing SYSTEM UTILS"
 install_pkgs "${SYSTEM_UTILS[@]}"
 echo "$DASH_LINE"

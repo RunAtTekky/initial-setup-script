@@ -12,3 +12,5 @@ clear
 ./make-directory-structure.sh
 ./install-dotfiles.sh
 ./set-shell.sh
+echo "$DASH_LINE"
+./install-hyprland-overrides.sh
