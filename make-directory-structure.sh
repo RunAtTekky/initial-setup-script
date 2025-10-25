@@ -20,9 +20,9 @@ echo "Cloning your favourite repos in $TARGET"
 echo "$DASH_LINE"
 for file in "$TARGET"/*; do
   if [ -f "$file" ] && [ -x "$file" ]; then
-    echo "Running: $file"
+    # echo "Running: $file"
     "$file"
-    echo "$DASH_LINE"
+    # echo "$DASH_LINE"
   fi
 done
 

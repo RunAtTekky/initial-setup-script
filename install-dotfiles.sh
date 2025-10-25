@@ -6,11 +6,7 @@ ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/runattekky/dotfiles"
 REPO_NAME="dotfiles"
 
-is_stow_installed() {
-  pacman -Qi "stow" &> /dev/null
-}
-
-if ! is_stow_installed; then
+if ! is_installed "stow"; then
   echo "Install stow first"
   exit 1
 fi
@@ -51,3 +47,4 @@ else
   exit 1
 fi
 
+echo "$DASH_LINE"
