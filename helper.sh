@@ -4,33 +4,27 @@ export CODING_REPO="$HOME/MySpace/coding"
 export PERSONAL_REPO="$HOME/MySpace/personal"
 export DASH_LINE="--------------------------------"
 
-install_program() {
-  PROGRAM="$1"
-  PKG="$2"
-  if ! command -v "$1" &> /dev/null; then
-    echo "Installing $PROGRAM"
-    yay -S --noconfirm --needed "$PKG"
-  else
-    echo "$PROGRAM is installed"
-  fi
-}
-
-export -f install_program
-
-have_pkg() {
+is_installed() {
   pacman -Qi "$1" &> /dev/null
 }
+is_group_installed() {
+  pacman -Qg "$1" &> /dev/null
+}
 
-export -f have_pkg
+install_pkgs() {
+  local packages=("$@")
+  local to_install=()
 
-install_pkg() {
-  PKG="$1"
-  if ! have_pkg "$PKG"; then
-    echo "Installing $PKG"
-    yay -S --noconfirm --needed "$PKG"
-  else
-    echo "$PKG is installed"
+  for pkg in "${packages[@]}"; do
+    if ! is_installed "$pkg" && ! is_group_installed "$pkg"; then
+      to_install+=("$pkg")
+    fi
+  done
+
+  if [ ${#to_install[@]} -ne 0 ]; then
+    echo "Installing ${packages[*]}"
+    yay -S --noconfirm "${to_install[@]}"
   fi
 }
 
-export -f install_pkg
+export -f install_pkgs 
