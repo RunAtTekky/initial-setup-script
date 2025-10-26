@@ -21,8 +21,10 @@ echo "$DASH_LINE"
 ./setup-nvim.sh
 echo "$DASH_LINE"
 
+sed -i 's/alacritty/kitty/' "$HOME/.config/uwsm/default"
 ./reboot.sh
 
-./install-atuin.sh
-echo "$DASH_LINE"
 ./install-oh-my-zsh.sh
+echo "$DASH_LINE"
+
+./install-atuin.sh

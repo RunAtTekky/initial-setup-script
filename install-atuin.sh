@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! command -v atuin; then
-  bash <(curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh)
+  yay -S --noconfirm atuin
   atuin login
   atuin sync
 else
