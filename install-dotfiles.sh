@@ -42,6 +42,7 @@ if [ $? -eq 0 ]; then
   stow zathura
   stow zellij
   stow zsh
+  stow gitconfig
 else
   echo "Failed to clone the repository."
   exit 1
