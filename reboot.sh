@@ -13,7 +13,7 @@ ask_reboot_and_continue() {
     else
         # If the marker doesn't exist, ask the user to reboot
         echo "The system needs to be rebooted for changes to take effect."
-        echo "Please reboot the system and run this script again."
+        echo "Run the script ./install-all.sh again to continue"
 
         # Create the marker file before rebooting
         touch "$MARKER_FILE"
@@ -32,6 +32,7 @@ ZSH_PATH="$(which zsh)"
 if [ "$CURR_SHELL" == "$ZSH_PATH" ]; then
     echo "ZSH is current shell"
 else
+    echo "Reboot to set ZSH as default shell"
     ask_reboot_and_continue
 fi
 
