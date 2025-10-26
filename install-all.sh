@@ -11,6 +11,7 @@ clear
 ./set-locale.sh
 
 ./run.sh
+./gh-auth-login.sh
 ./make-directory-structure.sh
 ./install-dotfiles.sh
 ./set-shell.sh
