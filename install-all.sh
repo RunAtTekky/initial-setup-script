@@ -11,8 +11,10 @@ clear
 ./set-locale.sh
 
 ./run.sh
+
+# ASK user if they are RunAtTekky, if yes then clone private repos
 ./gh-auth-login.sh
-./make-directory-structure.sh
+
 ./install-dotfiles.sh
 ./set-shell.sh
 echo "$DASH_LINE"
@@ -21,10 +23,5 @@ echo "$DASH_LINE"
 ./setup-nvim.sh
 echo "$DASH_LINE"
 
-sed -i 's/alacritty/kitty/' "$HOME/.config/uwsm/default"
-./reboot.sh
-
-./install-oh-my-zsh.sh
-echo "$DASH_LINE"
-
-./install-atuin.sh
+echo "Reboot to make zsh your shell"
+echo "Then run oh-my-zsh and atuin scripts"
