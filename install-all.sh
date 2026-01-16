@@ -8,5 +8,3 @@ source "./install-pkgs.sh"
 
 echo "Installing dotfiles"
 source "./install-dotfiles.sh"
-
-source "./set-shell.sh"
