@@ -3,7 +3,6 @@
 source ./curr.conf
 source ./helper.sh
 
-# TODO: Check if homebrew is installed or not
 echo "$DASH_LINE"
 
 echo "Updating system"
@@ -28,3 +27,4 @@ echo "$DASH_LINE"
 echo "Installing OTHERS"
 install_pkgs "${OTHERS[@]}"
 echo "$DASH_LINE"
+
