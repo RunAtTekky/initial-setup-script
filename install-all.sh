@@ -16,3 +16,5 @@ source "./install-oh-my-zsh.sh"
 
 echo "Installing NVIM with Runat's config"
 source "./install-nvim.sh"
+
+source "./install-aerospace.sh"
