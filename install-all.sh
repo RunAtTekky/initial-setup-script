@@ -23,5 +23,8 @@ source "./install-nvim.sh"
 cd "$CURR_DIR"
 source "./install-aerospace.sh"
 
+# Silent logins on macOS
+touch ~/.hushlogin
+
 echo "Almost everything RunAt uses is installed and configured."
 figlet -c 'DONE'
